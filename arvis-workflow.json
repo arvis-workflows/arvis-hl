@@ -1,0 +1,90 @@
+{
+  "$schema": "https://github.com/jopemachine/arvis-core/blob/master/workflow-schema.json",
+  "createdby": "importre",
+  "description": "Highlight your code stored in clipboard",
+  "name": "hl",
+  "readme": "# hl\n- Syntax highlight code in the clipboard\n\n# hl-theme\n- Set default theme\n\n# hl-demo\n- Show highlight demo",
+  "version": "0.1.5",
+  "webaddress": "",
+  "defaultIcon": "icon.png",
+  "enabled": true,
+  "commands": [
+    {
+      "type": "keyword",
+      "command": "hl-demo",
+      "title": "Show highlight demo",
+      "subtitle": "",
+      "withspace": false,
+      "arg_type": "no",
+      "action": [
+        {
+          "modifiers": "normal",
+          "type": "open",
+          "target": "https://highlightjs.org/static/demo/"
+        }
+      ]
+    },
+    {
+      "type": "scriptfilter",
+      "command": "hl-theme",
+      "title": "Set default theme",
+      "subtitle": "Search a theme you want",
+      "script_filter": "node ./src/theme.js \"$1\"",
+      "running_subtext": "Searching...",
+      "withspace": true,
+      "arg_type": "required",
+      "action": [
+        {
+          "modifiers": "normal",
+          "type": "script",
+          "script": "node ./src/save-theme.js \"$1\"",
+          "action": [
+            {
+              "modifiers": "normal",
+              "command": "hl",
+              "title": "Syntax highlight code in the clipboard",
+              "type": "scriptfilter",
+              "script_filter": "node ./src/index.js \"$1\"",
+              "running_subtext": "Searching...",
+              "withspace": true,
+              "action": [
+                {
+                  "modifiers": "normal",
+                  "type": "script",
+                  "script": "node ./src/convert.js \"$1\" \"remove-indent\""
+                },
+                {
+                  "modifiers": "cmd",
+                  "type": "script",
+                  "script": "node ./src/convert.js \"$1\""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "scriptfilter",
+      "command": "hl",
+      "title": "Syntax highlight code in the clipboard",
+      "subtitle": "Search a language you want",
+      "script_filter": "node ./src/index.js \"$1\"",
+      "running_subtext": "Searching...",
+      "withspace": true,
+      "arg_type": "required",
+      "action": [
+        {
+          "modifiers": "normal",
+          "type": "script",
+          "script": "node ./src/convert.js \"$1\" \"remove-indent\""
+        },
+        {
+          "modifiers": "cmd",
+          "type": "script",
+          "script": "node ./src/convert.js \"$1\""
+        }
+      ]
+    }
+  ]
+}

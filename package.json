@@ -1,0 +1,42 @@
+{
+  "name": "@jopemachine/arvis-hl",
+  "version": "0.0.2",
+  "description": "Syntax highlight code in the clipboard",
+  "license": "MIT",
+  "author": {
+    "name": "Jaewe Heo",
+    "email": "jaeweheo@gmail.com",
+    "url": "importre.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "postinstall": "arvish-init",
+    "preuninstall": "arvish-cleanup"
+  },
+  "files": [
+    "src",
+    "icon.png",
+    "info.plist",
+    "arvis-workflow.json"
+  ],
+  "keywords": [
+    "arvis",
+    "arvish",
+    "highlight",
+    "highlight.js",
+    "syntax",
+    "code",
+    "language"
+  ],
+  "dependencies": {
+    "@jopemachine/arvish": "^0.1.13",
+    "css": "^2.2.4",
+    "entities": "^2.0.0",
+    "highlight.js": "^9.18.1",
+    "htmlparser": "^1.7.7",
+    "onecolor": "^3.1.0",
+    "strip-indent": "^3.0.0"
+  }
+}
