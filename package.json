@@ -1,6 +1,6 @@
 {
   "name": "@jopemachine/arvis-hl",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "description": "Syntax highlight code in the clipboard",
   "license": "MIT",
   "author": {
@@ -31,7 +31,7 @@
     "language"
   ],
   "dependencies": {
-    "@jopemachine/arvish": "^0.1.13",
+    "@jopemachine/arvish": "^0.2.4",
     "css": "^2.2.4",
     "entities": "^2.0.0",
     "highlight.js": "^9.18.1",
