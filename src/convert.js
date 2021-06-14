@@ -1,4 +1,4 @@
-const arvish = require('@jopemachine/arvish');
+const arvish = require('arvish');
 const fs = require('fs');
 const cp = require('child_process');
 const hljs = require('highlight.js');

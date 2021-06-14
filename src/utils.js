@@ -1,4 +1,4 @@
-const arvish = require('@jopemachine/arvish');
+const arvish = require('arvish');
 
 function getRtf(colorList, codeBlock, bg) {
   return `{\\rtf1\\ansi

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const arvish = require('@jopemachine/arvish');
+const arvish = require('arvish');
 const utils = require('./utils');
 
 const input = arvish.input.toLowerCase();

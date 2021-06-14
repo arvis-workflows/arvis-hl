@@ -1,5 +1,5 @@
 const fs = require('fs');
-const arvish = require('@jopemachine/arvish');
+const arvish = require('arvish');
 
 const input = arvish.input.toLowerCase();
 const themeDir = './node_modules/highlight.js/styles/';
