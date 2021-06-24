@@ -4,7 +4,7 @@
   "description": "Highlight your code stored in clipboard",
   "name": "hl",
   "readme": "# hl\n- Syntax highlight code in the clipboard\n\n# hl-theme\n- Set default theme\n\n# hl-demo\n- Show highlight demo",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "webAddress": "",
   "defaultIcon": "icon.png",
   "enabled": true,
@@ -14,7 +14,6 @@
       "command": "hl-demo",
       "title": "Show highlight demo",
       "subtitle": "",
-      "withspace": false,
       "argType": "no",
       "actions": [
         {
@@ -29,34 +28,34 @@
       "command": "hl-theme",
       "title": "Set default theme",
       "subtitle": "Search a theme you want",
-      "scriptFilter": "node ./src/theme.js \"$1\"",
-      "running_subtext": "Searching...",
+      "scriptFilter": "node ./src/theme.js \"{query}\"",
+      "runningSubtext": "Searching...",
       "withspace": true,
       "argType": "required",
       "actions": [
         {
           "modifiers": "normal",
           "type": "script",
-          "script": "node ./src/save-theme.js \"$1\"",
+          "script": "node ./src/save-theme.js \"{query}\"",
           "actions": [
             {
               "modifiers": "normal",
               "command": "hl",
               "title": "Syntax highlight code in the clipboard",
               "type": "scriptFilter",
-              "scriptFilter": "node ./src/index.js \"$1\"",
-              "running_subtext": "Searching...",
+              "scriptFilter": "node ./src/index.js \"{query}\"",
+              "runningSubtext": "Searching...",
               "withspace": true,
               "actions": [
                 {
                   "modifiers": "normal",
                   "type": "script",
-                  "script": "node ./src/convert.js \"$1\" \"remove-indent\""
+                  "script": "node ./src/convert.js \"{query}\" \"remove-indent\""
                 },
                 {
                   "modifiers": "cmd",
                   "type": "script",
-                  "script": "node ./src/convert.js \"$1\""
+                  "script": "node ./src/convert.js \"{query}\""
                 }
               ]
             }
@@ -69,20 +68,20 @@
       "command": "hl",
       "title": "Syntax highlight code in the clipboard",
       "subtitle": "Search a language you want",
-      "scriptFilter": "node ./src/index.js \"$1\"",
-      "running_subtext": "Searching...",
+      "scriptFilter": "node ./src/index.js \"{query}\"",
+      "runningSubtext": "Searching...",
       "withspace": true,
       "argType": "required",
       "actions": [
         {
           "modifiers": "normal",
           "type": "script",
-          "script": "node ./src/convert.js \"$1\" \"remove-indent\""
+          "script": "node ./src/convert.js \"{query}\" \"remove-indent\""
         },
         {
           "modifiers": "cmd",
           "type": "script",
-          "script": "node ./src/convert.js \"$1\""
+          "script": "node ./src/convert.js \"{query}\""
         }
       ]
     }
