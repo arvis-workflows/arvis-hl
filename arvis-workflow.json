@@ -4,7 +4,7 @@
   "description": "Highlight your code stored in clipboard",
   "name": "hl",
   "readme": "# hl\n- Syntax highlight code in the clipboard\n\n# hl-theme\n- Set default theme\n\n# hl-demo\n- Show highlight demo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "webAddress": "",
   "defaultIcon": "icon.png",
   "enabled": true,
