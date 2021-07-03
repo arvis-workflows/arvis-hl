@@ -8,6 +8,9 @@
   "webAddress": "https://github.com/jopemachine/arvis-hl",
   "defaultIcon": "icon.png",
   "enabled": true,
+  "platform": [
+    "darwin"
+  ],
   "commands": [
     {
       "type": "keyword",
