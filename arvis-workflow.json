@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jopemachine/arvis-extension-validator/master/workflow-schema.json",
   "creator": "importre",
   "description": "Highlight your code stored in clipboard",
-  "name": "hl",
+  "name": "arvis-hl",
   "readme": "# hl\n- Syntax highlight code in the clipboard\n\n# hl-theme\n- Set default theme\n\n# hl-demo\n- Show highlight demo",
-  "version": "0.0.5",
-  "webAddress": "",
+  "version": "0.0.6",
+  "webAddress": "https://github.com/jopemachine/arvis-hl",
   "defaultIcon": "icon.png",
   "enabled": true,
   "commands": [

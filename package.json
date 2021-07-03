@@ -1,6 +1,6 @@
 {
   "name": "arvis-hl",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Syntax highlight code in the clipboard",
   "license": "MIT",
   "author": {
@@ -32,7 +32,7 @@
     "language"
   ],
   "dependencies": {
-    "arvish": ">=0.3.1",
+    "arvish": ">=0.4.3",
     "css": "^2.2.4",
     "entities": "^2.0.0",
     "highlight.js": "^9.18.1",
