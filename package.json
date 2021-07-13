@@ -18,7 +18,6 @@
   "files": [
     "src",
     "icon.png",
-    "info.plist",
     "arvis-workflow.json"
   ],
   "keywords": [
@@ -32,7 +31,7 @@
     "language"
   ],
   "dependencies": {
-    "arvish": ">=0.4.3",
+    "arvish": ">=0.5.7",
     "css": "^2.2.4",
     "entities": "^2.0.0",
     "highlight.js": "^9.18.1",
